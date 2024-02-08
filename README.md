@@ -4,10 +4,10 @@
 
 ## Team Members
 
-|        Name        |
-|--------------------|
-| Mohamad Ghattas    |
-|                    |
+|              Name              |
+|--------------------------------|
+| Mohamad Ghattas                |
+| Gerard Ledoux Mendjemo Ngangom |
 
 ## Screenshots
 
