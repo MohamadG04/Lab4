@@ -18,7 +18,9 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
+	<link rel="stylesheet" type="text/css" href="menu.css">
 
+<!--
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
@@ -100,6 +102,166 @@ Description : Responsive Layouts.
 
         
     </style>
+-->
+	<style>
+		/* Remove borders at the end, they have been add just for detecting positions of items*/
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body { margin: 0; padding: 0;}
+		img { max-width: 100%; height: auto; }
+		.container { width: 100%;}
+		.header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }        
+		.main { padding: 15px; margin-left: 150px;}		
+		.footer { position: fixed; bottom: 0; width: 100%;}
+		.news-item { padding: 10px; }
+
+		.row { 
+			margin-bottom: 15px; /* Add a margin between rows */
+		}
+		
+		.large, .medium, .small {
+			width: 100%;
+		}
+		
+		.gap {
+			/*I need some CSS codes.*/
+			padding-bottom: 50px;
+		}
+
+		@media screen and (min-width: 769px) {
+			.large {
+				/*I need some CSS codes.*/
+				width: 100%;
+			}
+			.medium { 
+				/*I need some CSS codes.*/
+				width: 100%;
+				
+			}
+			.small { 
+				/*I need some CSS codes.*/
+				width: 100%;
+			}
+
+			.row {
+				display: grid;
+				grid-template-columns: 30% 70%; /* Small and medium items side by side */
+        		grid-template-rows: auto; /* Default row height for other rows */
+				grid-gap: 0%; /* Add a bit of gap between small and medium items */
+			}
+
+			/* Set the large class to fill the entire row in a specific row */
+			.row .large {
+				grid-column: 1 / -1; /* Make the large class span all columns */
+			}
+
+			/* Reset display for small and medium items within the grid */
+			.row .medium, .row .small {
+				display: initial;
+				margin: 0;
+    		}
+
+		}
+
+		@media screen and (min-width: 501px) and (max-width: 768px) {
+			.large, .medium, .small {
+				/*I need some CSS codes.*/
+				width: 100%;
+			}
+
+			/* Use CSS Grid for side-by-side placement */
+			.row {
+				display: grid;
+				grid-template-columns: 40% 60%; /* Small and medium items side by side */
+				grid-template-rows: auto; /* Default row height for other rows */
+				grid-gap: 0%; /* Add a bit of gap between small and medium items */
+			}
+
+			/* Set the large item to fill the entire row in a specific row */
+			.row .large {
+				grid-column: 1 / -1; /* Make the large item span all columns */
+			}
+			
+
+			.container {
+				display: grid;
+				grid-template-columns: 1fr; /* Small and medium items side by side */
+				grid-template-rows: auto; /* Default row height for other rows */
+				grid-gap: 0%; /* Add a bit of gap between small and medium items */
+			}
+			.menu {
+				width: 100%;
+			}
+
+			/* Adjust the layout for the menu and main body */
+			ul {
+				list-style-type: none;  /* Remove default list styling */
+				display: grid;
+				grid-template-columns: 25% 25% 25% 25%; /* Small and medium items side by side */
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				margin-right: 80px;  /* Add margin between menu items */
+			}
+
+			.main {
+				width: 100%;
+				margin: 0px; /* Remove the left margin for the main body */
+			}
+		}
+
+
+		@media screen and (max-width: 500px) {
+			.large, .medium, .small {
+				/*I need some CSS codes.*/
+				width: 100%;
+			}
+			
+			.row {
+				display: block;
+			}
+
+			.container {
+				display: grid;
+				grid-template-columns: 1fr; /* Small and medium items side by side */
+				grid-template-rows: auto; /* Default row height for other rows */
+				grid-gap: 0%; /* Add a bit of gap between small and medium items */
+			}
+
+			.menu {
+				width: 100%;
+			}
+
+			/* Adjust the layout for the menu and main body */
+			ul {
+				list-style-type: none;  /* Remove default list styling */
+				display: grid;
+				grid-template-columns: 25% 25% 25% 25%; /* Small and medium items side by side */
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				margin-right: 80px;  /* Add margin between menu items */
+			}
+
+			.main {
+				width: 100%;
+				margin: 0px; /* Remove the left margin for the main body */
+				padding: 0px;
+			}
+
+			h1 {
+				font-size: 18px; /* Adjust font size for h1 in mobile view */
+			}
+		}
+	</style>
+
 </head>
 <body>
     <div class="container">
